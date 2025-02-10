@@ -5,7 +5,7 @@ class CenaMenu extends Phaser.Scene {
 
     preload(){
         this.load.image('bg', 'assets/menubgg.PNG');
-        this.load.image('logo', 'assets/missaoLogo.png')
+        this.load.image('logo', 'assets/logoHackerados.png')
         this.load.image('button', 'assets/playButton.png')
     }
 
@@ -16,6 +16,6 @@ class CenaMenu extends Phaser.Scene {
 
         let botao = this.add.image(767.5, 365, "button").setScale(0.5)
             .setInteractive()
-            .on("pointerdown", () => this.scene.start("CenaEscola"));
+            .on("pointerdown", () => this.scene.start("CenaJogo"));
     }
 }

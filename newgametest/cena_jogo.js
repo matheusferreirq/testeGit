@@ -47,7 +47,7 @@ class CenaJogo extends Phaser.Scene {
 
         this.anims.create({
             key: "andar-cima",
-            frames: this.anims.generateFrameNumbers("player", { start: 19, end: 23 }),
+            frames: this.anims.generateFrameNumbers("player", { start: 19, end: 24 }),
             frameRate: 10,
             repeat: -1
         });
