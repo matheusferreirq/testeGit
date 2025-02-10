@@ -5,7 +5,7 @@ class CenaMenu extends Phaser.Scene {
 
     preload(){
         this.load.image('bg', 'assets/menubgg.PNG');
-        this.load.image('logo', 'assets/logoHackerados.png')
+        this.load.image('logo', 'assets/logoHackerados1.png')
         this.load.image('button', 'assets/playButton.png')
     }
 
