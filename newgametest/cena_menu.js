@@ -21,7 +21,7 @@ class CenaMenu extends Phaser.Scene {
                 });
 
                 this.cameras.main.once("camerafadeoutcomplete", () => {
-                    this.scene.start("CenaEscola")}); 
+                    this.scene.start("CenaTermo")}); 
 
             this.tweens.add({
                 targets: botao,

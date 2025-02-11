@@ -14,9 +14,8 @@ class CenaEscola extends Phaser.Scene {
     
     
     create() {
+        this.cameras.main.fadeIn(500);
         this.add.image(767.5, 365, 'inSchool');
-        this.cameras.main.fadeIn(500)
-
             // Criando o jogador
     this.player = this.physics.add.sprite(400, 400, "player").setScale(2);
     this.player.setCollideWorldBounds(true);
