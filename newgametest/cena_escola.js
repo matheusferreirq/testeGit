@@ -15,7 +15,7 @@ class CenaEscola extends Phaser.Scene {
     
     create() {
         this.add.image(767.5, 365, 'inSchool');
-
+        this.cameras.main.fadeIn(500)
 
             // Criando o jogador
     this.player = this.physics.add.sprite(400, 400, "player").setScale(2);

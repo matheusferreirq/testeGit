@@ -14,7 +14,7 @@ class CenaJogo extends Phaser.Scene {
     }
 
     create() {
-        this.add.image(400, 300, 'gamebg');
+        this.add.image(767.5, 365, 'gamebg');
 
         // Criando a porta como um objeto estático
         this.door = this.physics.add.staticImage(400, 187, 'door').setScale(0.65);
