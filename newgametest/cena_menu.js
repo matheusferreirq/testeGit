@@ -1,3 +1,4 @@
+// Criando classe para a cena
 class CenaMenu extends Phaser.Scene {
     constructor() {
         super({ key: "CenaMenu" });
@@ -9,11 +10,12 @@ class CenaMenu extends Phaser.Scene {
         this.load.image('button', 'assets/playButton.png')
     }
 
-
     create() {
+        // Adicionando fundo e logo
         this.add.image(767.5, 365, 'bg').setScale(1);
         this.add.image(750, 160, "logo").setScale(0.9);
 
+        // Adicionando botão e atribuindo a função de iniciar a animação de Fade Out e trocar de cena quando acabar
         var botao = this.add.image(745, 365, "button").setScale(0.5)
             .setInteractive()
             .on("pointerdown", () => {
@@ -23,19 +25,21 @@ class CenaMenu extends Phaser.Scene {
                 this.cameras.main.once("camerafadeoutcomplete", () => {
                     this.scene.start("CenaTermo")}); 
 
+            // Animação de aumentar de tamanho
             this.tweens.add({
                 targets: botao,
-                scaleX: 0.55, // Aumenta o tamanho horizontal
-                scaleY: 0.55, // Aumenta o tamanho vertical
-                duration: 500, // Tempo da animação
-                yoyo: true, // Retorna ao tamanho original
-                repeat: -1, // Repete infinitamente
-                ease: "Sine.easeInOut" // Efeito suave
+                scaleX: 0.55, 
+                scaleY: 0.55,
+                duration: 500, 
+                yoyo: true, 
+                repeat: -1, 
+                ease: "Sine.easeInOut" 
             });
 
+            // Diminuindo a transparência e tamanho quando o mouse está em cima do botão
             botao.on("pointerover", () => {
-                botao.setScale(0.55);
-                botao.setAlpha(0.8); // Deixa o botão mais transparente
+                botao.setScale(0.45);
+                botao.setAlpha(0.7); 
             });
             
             botao.on("pointerout", () => {
