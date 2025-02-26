@@ -12,7 +12,7 @@ class CenaMenu extends Phaser.Scene {
 
     create() {
         // Adicionando fundo e logo
-        this.add.image(767.5, 365, 'bg').setScale(1);
+        this.add.image(700, 365, 'bg').setScale(1);
         this.add.image(750, 160, "logo").setScale(0.9);
 
         // Adicionando botão e atribuindo a função de iniciar a animação de Fade Out e trocar de cena quando acabar
