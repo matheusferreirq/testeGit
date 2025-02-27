@@ -11,6 +11,8 @@ class CenaEscola extends Phaser.Scene {
             frameWidth: 64,
             frameHeight: 64
         });
+
+        this.load.spritesheet()
     }
 
     
